@@ -51,5 +51,17 @@
         "name": "Rozrobka",
         "url": "https://rozrobka.com/",
         "logoUrl": "/images/partners/rozrobka.png"
+    }, {
+        "name": "SoftServe",
+        "url": "https://softserve.ua/en/",
+        "logoUrl": "/images/partners/softserve.png"
+    }, {
+        "name": "Mobile Warsaw",
+        "url": "http://mobile-warsaw.pl/",
+        "logoUrl": "/images/partners/mobile_warsaw.png"
+    }, {
+        "name": "TechMagic",
+        "url": "http://www.techmagic.co/",
+        "logoUrl": "/images/partners/techmagic.png"
     }]
 }]
