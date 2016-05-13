@@ -149,7 +149,7 @@
       <template is="dom-repeat" items="[[_toArray(speakers)]]" as="speaker" on-dom-change="_updateCascadedNodes">
         <div class="speaker" cascaded>
           <paper-material class="card">
-            <div class="header">
+            <a href="{$ baseurl $}/speakers/[[speaker.id]]/" class="header">
               <iron-image src="[[speaker.photoUrl]]" class="photo placeholder-color" preload fade
                           sizing="cover"></iron-image>
               <div class="photo-overlay"></div>
@@ -165,7 +165,7 @@
                 <span class="name">[[speaker.name]]</span>
                 <span class="title">[[speaker.company]], [[speaker.country]]</span>
               </div>
-            </div>
+            </a>
             <a href="{$ baseurl $}/speakers/[[speaker.id]]/" class="card-content">
               <truncate-marked-text class="bio" text="[[speaker.bio]]" characters="220"
                                     break-last-word></truncate-marked-text>

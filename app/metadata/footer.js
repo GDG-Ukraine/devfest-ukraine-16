@@ -5,6 +5,10 @@ module.exports = {
         title: 'For visitors',
         links: [
           {
+            text: 'Team',
+            url: '/team/'
+          },
+          {
             text: 'Google Developers',
             url: 'https://developers.google.com/',
             newTab: true

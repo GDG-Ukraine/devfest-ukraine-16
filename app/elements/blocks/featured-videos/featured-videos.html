@@ -29,6 +29,10 @@
         @apply(--layout-justified);
       }
 
+      .heading {
+        @apply(--layout-flex);
+      }
+
       .controls {
         margin-bottom: 10px;
       }
@@ -64,6 +68,7 @@
         @apply(--layout-center-center);
         margin: 0 auto;
         cursor: pointer;
+        background: rgba(0,0,0,0.15);
       }
 
       .play-icon {
@@ -103,7 +108,7 @@
 
     <div class="container">
       <div class="videos-header">
-        <h4 class="heading">Featured DevFest 2015 Sessions</h4>
+        <h4 class="heading">Featured #dfua '15 Sessions</h4>
         <div class="controls">
           <paper-icon-button icon="icons:chevron-left" on-tap="shiftContentLeft"></paper-icon-button>
           <paper-icon-button icon="icons:chevron-right" on-tap="shiftContentRight"></paper-icon-button>
@@ -131,7 +136,8 @@
         </template>
       </div>
       <div>
-        <a href="https://www.youtube.com/playlist?list=PLt8lEzcLNl31AX3-ONkkWmDOZezu9Cmnv" class="block-link" target="_blank">
+        <a href="https://www.youtube.com/playlist?list=PLt8lEzcLNl31AX3-ONkkWmDOZezu9Cmnv" class="block-link"
+           target="_blank">
           <paper-button>View all videos</paper-button>
         </a>
       </div>
@@ -163,7 +169,11 @@
               observer: '_videosChanged'
             },
             _videos: Array,
-            _selectedVideo: Object
+            _selectedVideo: Object,
+            _currentIndex: {
+              type: Number,
+              value: 0
+            }
           };
         }
 
@@ -172,42 +182,33 @@
         }
 
         _playVideo(e) {
+          var presenters = e.model.video.speakers ? (' by ' + e.model.video.speakers) : '';
           this._selectedVideo = {
-            title: e.model.video.title + ' by ' + e.model.video.speakers,
+            title: e.model.video.title + presenters,
             youtubeId: e.model.video.youtubeId
           };
           this.$.videoViewer.open();
         }
 
         shiftContentLeft() {
-          var transform = this.$.videos.style.transform;
           var videos = Polymer.dom(this.root).querySelectorAll('.video-item');
-
-          var lastX = transform ? parseInt(transform.split('(')[1].split(',')[0]) : 0;
-
           var cardRect = videos[videos.length - 1].getBoundingClientRect();
           var cardWidth = cardRect.width;
-
-          var newX = lastX + cardWidth;
-          if (newX < cardWidth) {
+          var newX = -(this._currentIndex - 1) * cardWidth;
+          if (this._currentIndex < videos.length && this._currentIndex > 0) {
             this.$.videos.style.transform = 'translate3d(' + newX + 'px, 0, 0)';
+            this._currentIndex--;
           }
         }
 
         shiftContentRight() {
-          var transform = this.$.videos.style.transform;
           var videos = Polymer.dom(this.root).querySelectorAll('.video-item');
-
-          var lastX = transform ? parseInt(transform.split('(')[1].split(',')[0]) : 0;
-
-          var containerWidth = this.$.videos.getBoundingClientRect().width;
           var cardRect = videos[videos.length - 1].getBoundingClientRect();
-          var lastCardLeft = cardRect.left;
           var cardWidth = cardRect.width;
-
-          var newX = lastX - cardWidth;
-          if (lastCardLeft > containerWidth) {
+          var newX = -(this._currentIndex + 1) * cardWidth;
+          if (this._currentIndex >= 0 && this._currentIndex < videos.length - 1) {
             this.$.videos.style.transform = 'translate3d(' + newX + 'px, 0, 0)';
+            this._currentIndex++;
           }
         }
 

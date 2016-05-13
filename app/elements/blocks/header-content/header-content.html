@@ -5,6 +5,7 @@
 <link rel="import" href="../../../bower_components/paper-tabs/paper-tabs.html">
 
 <link rel="import" href="./animatable-content.html">
+<link rel="import" href="../../behaviors/utils-behavior.html">
 
 
 <dom-module id="header-content">
@@ -133,8 +134,9 @@
               <div class="action-buttons">
                 <a href="https://docs.google.com/forms/d/1rNGi2oPOAZ84mKkL5ccDYUEp93cO0RJ4GZZ-NTmtkYg/viewform"
                    target="_blank">
-                  <paper-button class="primary" raised>Become a speaker</paper-button>
+                  <paper-button>Become a speaker</paper-button>
                 </a>
+                <paper-button id="buyTicket" class="primary" raised on-tap="_scrollToTickets">Buy a ticket</paper-button>
               </div>
             </div>
           </div>
@@ -150,6 +152,11 @@
             <h3 class="page-title">Speakers</h3>
           </div>
         </animatable-content>
+        <animatable-content data-page="team">
+          <div class="container">
+            <h3 class="page-title">Team</h3>
+          </div>
+        </animatable-content>
       </neon-animated-pages>
     </app-toolbar>
 
@@ -160,6 +167,10 @@
       'use strict';
 
       class HeaderContent {
+
+        get behaviors() {
+          return [Polymer.UtilsBehavior];
+        }
 
         beforeRegister() {
           this.is = this.constructor.name.replace(/\W+/g, '-')
@@ -190,6 +201,10 @@
 
         _openVideo() {
           app.openVideo('GDG DevFest Ukraine 2015', 'DfMnJAzOFng', true);
+        }
+
+        _scrollToTickets() {
+          this.scrollTo(document.body, document.body.getElementsByTagName('tickets-block')[0].getBoundingClientRect().top, 1000);
         }
 
       }

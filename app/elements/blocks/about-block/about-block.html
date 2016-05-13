@@ -16,6 +16,7 @@
 
       .about-item {
         @apply(--layout-flex-5);
+        text-align: justify;
       }
 
       .about-item:not(:first-of-type) {
@@ -26,9 +27,19 @@
         @apply(--layout-flex);
       }
 
+      .page-link {
+        margin-top: 18px;
+        display: block;
+        font-size: 16px;
+      }
+
       @media (min-width: 601px) {
         .container {
           @apply(--layout-horizontal);
+        }
+
+        .container .heading {
+          margin-bottom: 20px;
         }
 
         .about-item:not(:first-of-type) {
@@ -40,6 +51,7 @@
       <div class="about-item">
         <h4 class="heading">Organizer</h4>
         {$ aboutOrganizers $}
+        <a class="page-link" href="/team/">Open team page</a>
       </div>
       <span class="divider"></span>
       <div class="about-item">

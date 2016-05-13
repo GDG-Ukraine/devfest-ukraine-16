@@ -28,7 +28,10 @@
         @apply(--layout-center-justified);
       }
 
-      ticket-element {
+      .ticket-link {
+        @apply(--layout-horizontal);
+        @apply(--layout-flex);
+        @apply(--layout-justified);
         margin: 15px;
         cursor: pointer;
       }
@@ -46,19 +49,12 @@
       .buy-button {
         margin-top: 30px;
         background: #fff;
+        font-size: 0.8em;
         color: var(--primary-text-color);
       }
 
-      paper-dialog {
-        background: #fff;
-      }
-
-      paper-dialog .buttons {
-        color: initial;
-      }
-
       @media (min-width: 601px) {
-        ticket-element {
+        .ticket-link {
           max-width: 350px;
         }
       }
@@ -70,26 +66,21 @@
       </div>
       <div class="tickets-wrapper">
         {% for ticket in ticketsBlock.tickets %}
-        <ticket-element type="{$ ticket.name $}"
-                        price="{$ ticket.price $}"
-                        currency="{$ ticket.currency $}"
-                        starts="{$ ticket.starts $}"
-                        ends="{$ ticket.ends $}"
-                        info="{$ ticket.info $}"
-                        on-tap="openTicketsDialog"></ticket-element>
+        <a class="ticket-link" href="{$ ticketsBlock.url $}" target="_blank">
+          <ticket-element type="{$ ticket.name $}"
+                          price="{$ ticket.price $}"
+                          currency="{$ ticket.currency $}"
+                          starts="{$ ticket.starts $}"
+                          ends="{$ ticket.ends $}"
+                          info="{$ ticket.info $}"></ticket-element>
+        </a>
         {% endfor %}
       </div>
       <div class="details">{$ ticketsBlock.details $}</div>
-      <paper-button class="buy-button" raised on-tap="openTicketsDialog">Buy ticket</paper-button>
+      <a href="{$ ticketsBlock.url $}" target="_blank">
+        <paper-button class="buy-button" raised>Buy a ticket</paper-button>
+      </a>
     </div>
-
-
-    <paper-dialog id="ticketsDialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation" modal>
-      <p>We have run out all our tickets</p>
-      <div class="buttons">
-        <paper-button dialog-confirm>Close</paper-button>
-      </div>
-    </paper-dialog>
   </template>
 
   <script>
@@ -101,31 +92,6 @@
         beforeRegister() {
           this.is = this.constructor.name.replace(/\W+/g, '-')
             .replace(/([a-z\d])([A-Z])/g, '$1-$2').toLowerCase();
-          this.listeners = {
-            'iron-overlay-opened': '_onOverlayOpened',
-            'iron-overlay-closed': '_onOverlayClosed'
-          };
-        }
-
-        openTicketsDialog() {
-          this.fire('iron-signal', {
-            name: 'track-event',
-            data: {
-              category: 'button',
-              action: 'click',
-              label: 'group',
-              value: 'buy-a-ticket'
-            }
-          });
-          this.$.ticketsDialog.open();
-        }
-
-        _onOverlayOpened() {
-          Polymer.IronDropdownScrollManager.pushScrollLock(this.$.ticketsDialog);
-        }
-
-        _onOverlayClosed() {
-          Polymer.IronDropdownScrollManager.removeScrollLock(this.$.ticketsDialog);
         }
 
       }

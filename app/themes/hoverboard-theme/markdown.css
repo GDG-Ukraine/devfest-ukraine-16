@@ -1,0 +1,51 @@
+.markdown-html img,
+.markdown-html iframe {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.markdown-html paper-button {
+  font-size: 0.8em;
+}
+
+.markdown-html .quote-container {
+  @apply(--layout-horizontal);
+  padding: 20px 0 20px 20px;
+}
+
+.markdown-html .quote-container.reverse {
+  @apply(--layout-horizontal-reverse);
+  padding: 20px 20px 20px 0;
+}
+
+.markdown-html .quote-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: contain;
+}
+
+@media (--md-viewport) {
+  .markdown-html .quote-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.markdown-html .quote-text {
+  @apply(--layout);
+  @apply(--layout-flex);
+  @apply(--layout-center);
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.markdown-html .quote-container.reverse .quote-text {
+  text-align: right;
+}
+
+.markdown-html .text-center {
+  text-align: center;
+}

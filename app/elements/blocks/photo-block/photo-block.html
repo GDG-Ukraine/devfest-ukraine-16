@@ -42,11 +42,13 @@
         @apply(--layout-vertical);
         @apply(--layout-center-center);
         @apply(--layout-fit);
+        padding: 16px;
         background: rgba(0, 0, 0, .3);
         color: #fff;
         font-size: 21px;
         opacity: 0;
         transition: opacity .3s;
+        text-align: center;
       }
 
       .open-photos:hover {
@@ -75,7 +77,7 @@
                     fade></iron-image>
         <a class="open-photos" href="{$ galleryBlock.albumUrl $}" target="_blank">
           <paper-ripple></paper-ripple>
-          <span>Click here to view more photos</span>
+          <span>Click here to view more photos <iron-icon icon="open-in-new"/></span>
         </a>
       </div>
       <div class="vertical-block">
@@ -84,7 +86,7 @@
                       fade></iron-image>
           <a class="open-photos" href="{$ galleryBlock.albumUrl $}" target="_blank">
             <paper-ripple></paper-ripple>
-            <span>Click here to view more photos</span>
+            <span>Click here to view more photos <iron-icon icon="open-in-new"/></span>
           </a>
         </div>
         <div class="photo">
@@ -92,7 +94,7 @@
                       fade></iron-image>
           <a class="open-photos" href="{$ galleryBlock.albumUrl $}" target="_blank">
             <paper-ripple></paper-ripple>
-            <span>Click here to view more photos</span>
+            <span>Click here to view more photos <iron-icon icon="open-in-new"/></span>
           </a>
         </div>
       </div>

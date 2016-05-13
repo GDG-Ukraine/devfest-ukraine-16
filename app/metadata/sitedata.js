@@ -1,5 +1,5 @@
 module.exports = {
-  aboutOrganizers: 'GDG Lviv with support of 8 GDGs from all around Ukraine is proud organizer of DevFest Ukraine',
+  aboutOrganizers: '<a href="http://lviv.gdg.org.ua" target="_blank">GDG Lviv</a> with support of 8 GDGs from all around Ukraine is proud organizer of DevFest Ukraine',
   aboutGDG: 'Google Developers Group (GDG) - is open and volunteer geek community who create exciting projects and share experience about Google technologies with a passion',
   statistics: [{
     counter: 500,
@@ -33,30 +33,36 @@ module.exports = {
     title: 'Tickets',
     tickets: [{
       name: 'Student',
-      price: 400,
+      price: 500,
       currency: '₴',
       starts: 'May 1',
       ends: 'Sep 8',
       info: 'Requires valid student ID'
     }, {
       name: 'Early Bird',
-      price: 700,
+      price: 750,
       currency: '₴',
       starts: 'May 1',
       ends: 'July 1',
-      info: 'Or first 150 tickets',
+      info: 'Or first 100 tickets',
       soldOut: true
     }, {
       name: 'Lazy Bird',
-      price: 900,
+      price: 1000,
       currency: '₴',
       starts: 'July 1',
       ends: 'Sep 8'
     }],
+    url: 'http://2event.com/events/630032',
     details: 'Tickets grant access to all conference sections, coffee breaks, lunch and party. Accommodation is NOT included in the ticket price.'
   },
   socialFeed: {
     source: '/data/tweets.json'
   },
-  partnershipProposition: 'mailto:devfest@gdg.org.ua?subject=Partnership%20with%20GDG%20DevFest%20Ukraine%202016'
+  partnershipProposition: 'mailto:devfest@gdg.org.ua?subject=Partnership%20with%20GDG%20DevFest%20Ukraine%202016',
+  teamPage: {
+    title: 'About Us',
+    icon: 'info',
+    text: 'Google is known all around the world. Everyone is “googling”, checking on “maps” and communicating in “gmail”. For simple users, they are services that just works, but not for us. Developers see much more: APIs, scalability issues, complex technology stacks. And that is what GDG is about.<br><br> [Google Developers Group (GDG) Lviv](http://lviv.gdg.org.ua/) - is open and volunteer geek community who create exciting projects and share experience about Google technologies with a passion.<br><br> Our goal is to organize space to connect the best industry experts with Ukrainian audience to boost development of IT.'
+  }
 };

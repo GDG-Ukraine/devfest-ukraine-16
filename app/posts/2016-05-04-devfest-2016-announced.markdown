@@ -21,4 +21,4 @@ Also, watch our **highlight video from DevFest 2015**
 
 You can find information about registration, speakers, tickets and other latest news on the [conference website](http://devfest.gdg.org.ua/),[Facebook](https://facebook.com/GDGLviv), [Twitter](https://twitter.com/intent/user?screen_name=GDGLviv) or [Google+](https://plus.google.com/b/102444623953913144164). Don’t miss anything interesting!
 
-And most importantly: **Make the most of the development. Make the most of you!**
+And most importantly: **Make the most of development. Make the most of you!**
