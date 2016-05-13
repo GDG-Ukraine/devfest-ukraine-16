@@ -18,15 +18,15 @@
     }, {
         "name": "CyberBionic",
         "url": "http://edu.cbsystematics.com/en/",
-        "logoUrl": "/images/partners/cbs.png"
+        "logoUrl": "/images/partners/cbs.svg"
     }, {
         "name": "ITVDN",
         "url": "http://itvdn.com/en",
-        "logoUrl": "/images/partners/itvdn.png"
+        "logoUrl": "/images/partners/itvdn.svg"
     }, {
         "name": "ITEM",
         "url": "http://item.com.ua/",
-        "logoUrl": "/images/partners/item.png"
+        "logoUrl": "/images/partners/item.svg"
     }, {
         "name": "JDay",
         "url": "http://www.jday.com.ua/",
@@ -34,7 +34,7 @@
     }, {
         "name": "Lviv Convention Bureau",
         "url": "http://lvivconvention.com.ua/en/",
-        "logoUrl": "/images/partners/lcb.png"
+        "logoUrl": "/images/partners/lcb.svg"
     }, {
         "name": "Lviv IT School",
         "url": "http://lits.com.ua/",
@@ -42,7 +42,7 @@
     }, {
         "name": "Symphony Solutions",
         "url": "http://www.symphony-solutions.eu/",
-        "logoUrl": "/images/partners/symphony-solutions.png"
+        "logoUrl": "/images/partners/symphony-solutions.svg"
     }, {
         "name": "UA Mobile",
         "url": "http://www.uamobile.org/",
@@ -50,18 +50,26 @@
     }, {
         "name": "Rozrobka",
         "url": "https://rozrobka.com/",
-        "logoUrl": "/images/partners/rozrobka.png"
+        "logoUrl": "/images/partners/rozrobka.svg"
     }, {
         "name": "SoftServe",
         "url": "https://softserve.ua/en/",
-        "logoUrl": "/images/partners/softserve.png"
+        "logoUrl": "/images/partners/softserve.svg"
     }, {
         "name": "Mobile Warsaw",
         "url": "http://mobile-warsaw.pl/",
-        "logoUrl": "/images/partners/mobile_warsaw.png"
+        "logoUrl": "/images/partners/mobile-warsaw.svg"
     }, {
         "name": "TechMagic",
         "url": "http://www.techmagic.co/",
         "logoUrl": "/images/partners/techmagic.png"
+    }, {
+        "name": "Betaplace",
+        "url": "http://betaplace.com.ua/en/",
+        "logoUrl": "/images/partners/betaplace.png"
+    }, {
+        "name": "Robo Camp",
+        "url": "http://robocamp.com.ua//",
+        "logoUrl": "/images/partners/robocamp.png"
     }]
 }]
