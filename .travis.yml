@@ -4,8 +4,7 @@ node_js:
 install:
   - npm install -g bower polymer-cli@0.12.0
   - bower install
-script:
-  - echo "Deploying!"
+script: echo "Deploying!"
 before_deploy: polymer build
 deploy:
   - provider: firebase
