@@ -10,6 +10,9 @@ before_deploy: polymer build
 deploy:
   - provider: firebase
     project: hoverboard-firebase
+    skip_cleanup: true
+    on:
+      branch: master
     # FIXME: move token from env var to here
     # TODO: `travis encrypt`
     # NOTE: falls back to env var in case on missing token
