@@ -1,11 +1,17 @@
 language: node_js
 node_js:
   - '6'
+install:
+  - npm install -g bower polymer-cli@0.12.0
+  - bower install
 script:
   - echo "Deploying!"
-install:
-  - npm install -g bower polymer-cli@0.12.0 firebase-tools
-  - bower install
-after_success:
-  - polymer build
-  - firebase deploy --token $FIREBASE_TOKEN --project hoverboard-firebase
+before_deploy: polymer build
+deploy:
+  - provider: firebase
+    project: hoverboard-firebase
+    # FIXME: move token from env var to here
+    # TODO: `travis encrypt`
+    # NOTE: falls back to env var in case on missing token
+    # token:
+    #   secure: {{ ENCRYPTED_TOKEN_HERE }}
