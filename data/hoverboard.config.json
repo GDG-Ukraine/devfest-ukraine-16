@@ -202,7 +202,6 @@
       "title": "FAQ",
       "headerSettings": {
         "backgroundColor": "#346DF1",
-        "backgroundImage": "/images/backgrounds/faq.jpg",
         "fontColor": "#fff",
         "tabBarColor": "#fff"
       }
