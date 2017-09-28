@@ -46,6 +46,14 @@
         font-size: 16px;
       }
 
+      .united .session:first-of-type {
+        flex: 3;
+      }
+
+      .united .session:last-of-type {
+        flex: 1;
+      }
+
       .session {
         padding: 0 16px;
       }
@@ -70,14 +78,14 @@
         </div>
 
         <div
-          class="sessions-wrapper"
+          class$="sessions-wrapper [[_getConnectedCells(timeslot.sessions)]]"
           layout
           vertical$="{{app.isPhoneSize}}"
           horizontal$="{{!app.isPhoneSize}}"
           flex$="{{!app.isPhoneSize}}"
         >
           <template is="dom-repeat" items="[[timeslot.sessions]]" as="session">
-            <div class="session" layout vertical flex$="{{!app.isPhoneSize}}">
+            <div class="session" style="" layout vertical flex$="{{!app.isPhoneSize}}">
               <template
                 is="dom-repeat"
                 items="[[session]]"
@@ -135,6 +143,9 @@
           }
         },
 
+        _getConnectedCells: function(sessions) {
+            return this.day.tracks.length - sessions.length <=2 ? 'united': '';
+        },
 
         _splitText: function (text, divider, index) {
           return text.split(divider)[index];
