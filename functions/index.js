@@ -50,9 +50,9 @@ function generateScheduleOnChange(schedulePromise, sessionsPromise, speakersProm
                 speakers
             } = scheduleGenerator(scheduleDB, sessionsDB, speakersDB);
 
-            admin.database().ref('/generatedSchedule').set(schedule);
-            admin.database().ref('/generatedSessions').set(sessions);
-            admin.database().ref('/generatedSpeakers').set(speakers);
+            admin.database().ref('/generated/schedule').set(schedule);
+            admin.database().ref('/generated/sessions').set(sessions);
+            admin.database().ref('/generated/speakers').set(speakers);
 
         })
         .catch(e => console.log('Error at schedule genaration', e));

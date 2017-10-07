@@ -25,7 +25,7 @@
     <firebase-document
       id="querySpeakers"
       app-name="{$ firebase.name $}"
-      path="/generatedSpeakers"
+      path="/generated/speakers"
       order-by-child="order"
       data="{{_firebaseSpeakersRaw}}">
     </firebase-document>
@@ -40,7 +40,7 @@
     <firebase-document
       id="querySessions"
       app-name="{$ firebase.name $}"
-      path="/generatedSessions"
+      path="/generated/sessions"
       data="{{_firebaseSessions}}">
     </firebase-document>
 
@@ -54,7 +54,7 @@
     <firebase-document
       id="querySchedule"
       app-name="{$ firebase.name $}"
-      path="/generatedSchedule"
+      path="/generated/schedule"
       data="{{_firebaseSchedule}}">
     </firebase-document>
 
