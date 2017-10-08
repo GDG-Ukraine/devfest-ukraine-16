@@ -98,6 +98,7 @@
                   app="{{app}}"
                   day-name="[[name]]"
                   session="{{subSession}}"
+                  most-wanted-sessions="[[mostWantedSessions]]"
                   layout flex-auto
                 ></session-element>
 
@@ -142,6 +143,10 @@
           filters: {
             type: Array,
             value: []
+          },
+
+          mostWantedSessions: {
+            type: Object
           }
         },
 

@@ -49,6 +49,13 @@
     ></app-route>
 
     <firebase-document
+      id="allUserSessions"
+      app-name="{$ firebase.name $}"
+      path="{$ firebase.userSessionsPath $}"
+      data="{{allUserSessionsData}}">
+    </firebase-document>
+
+    <firebase-document
       id="userSessions"
       app-name="{$ firebase.name $}"
       path="{$ firebase.userSessionsPath $}/[[app.user.uid]]"
@@ -77,6 +84,7 @@
             name$="day[[_addToValue(index, 1)]]"
             app="{{app}}"
             day="[[day]]"
+            most-wanted-sessions="[[mostWantedSessions]]"
             filters="[[filters]]"
           ></schedule-day>
         </template>
@@ -135,6 +143,10 @@
 
           filters: {
             type: Array
+          },
+
+          mostWantedSessions: {
+            type: Object
           }
         },
 
@@ -142,7 +154,8 @@
           '_routePageChanged(routeData.day)',
           '_userChanged(app.user)',
           '_queryParamsChanged(queryParams, sessions)',
-          '_filtersChanged(filters.splices)'
+          '_filtersChanged(filters.splices)',
+          '_mapMostWantedSessions(allUserSessionsData, schedule)'
         ],
 
         listeners: {
@@ -213,6 +226,21 @@
           if (!user && this.app.selectedDay === 'myschedule') {
             this.set('routeData.day', 'day1');
           }
+        },
+
+        _mapMostWantedSessions: function (allUserSessionsData, schedule) {
+          let mostWantedSessions = {};
+          if (!Object.keys(allUserSessionsData).length) return;
+//          console.log(allUserSessionsData);
+          for (const user of Object.keys(allUserSessionsData)) {
+            for (const sessionId of Object.keys(allUserSessionsData[user])) {
+              mostWantedSessions[sessionId] = mostWantedSessions[sessionId]
+                ? mostWantedSessions[sessionId] + 1
+                : 1;
+            }
+          }
+          this.set('mostWantedSessions', mostWantedSessions);
+//          console.log(mostWantedSessions);
         }
 
       });
