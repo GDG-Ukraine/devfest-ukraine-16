@@ -7,7 +7,7 @@
 body {
 	font-family: "Product Sans", arial, sans-serif !important;
 	color: rgb(66, 66, 66);
-	background: #efeff2 url(../img/bg.png) repeat-y 50% 500px;
+	background: #efeff2 url(../../images/2018/bg.png) repeat-y 50% 500px;
 	background-size: 70%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
