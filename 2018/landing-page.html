@@ -1,0 +1,199 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="animated-element.html">
+
+<link rel="import" href="../src/styles/shared-styles.html">
+
+
+<dom-module id="landing-page">
+
+  <template>
+
+    <style include="shared-styles">
+      :host {
+        height: 100vh;     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .page-container {
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .paper-card-container {
+        padding: 16px 0;
+      }
+
+      paper-card {
+        padding: 50px;
+        width: 100%;
+        background-color: #ffffff;
+      }
+
+      .home-wrapper {
+        font-size: 18px;
+      }
+
+      .logo {
+        width: 240px;
+        min-height: 80px;
+      }
+
+      .dates {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      .motto {
+        margin-top: 24px;
+        max-width: 470px;
+        font-size: 24px;
+        line-height: 1;
+      }
+
+      .action-buttons {
+        margin-top: 24px;
+      }
+
+      paper-button {
+        font-size: 0.8em;
+        color: #fff;
+      }
+
+      paper-button iron-icon {
+        margin-right: 8px;
+      }
+
+      .info-items {
+        margin-top: 8px;
+      }
+
+      .info-item:not(:last-of-type) {
+        margin-right: 8px;
+      }
+
+      .animated-part {
+        position: relative;
+        width: 200px;
+        max-height: 500px;
+      }
+
+      animated-element:first-of-type {
+        position: absolute;
+        top: 0;
+      }
+
+      animated-element:last-of-type {
+        position: absolute;
+        bottom: 0;
+      }    
+
+      @media (max-width: 676px) {
+        .container {
+          height: 100%;
+        }
+
+        paper-card {
+          padding: 25px;
+        }
+
+        .animated-part {
+          display: none;
+        }
+
+        .motto {
+          font-size: 22px;
+          line-height: 1.5;
+        }
+      }
+
+      @media (max-width: 924px) { 
+
+        paper-button {
+          margin-bottom: 20px;
+        }
+
+        .paper-button:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+    </style>
+
+
+    <div class="container">
+        <paper-card cascaded>
+            <div class="paper-card-container" layout horizontal>      
+                <div class="home-wrapper">
+                    <iron-image class="logo" src="../images/logo-light.svg" sizing="contain"
+                                alt="GDG DevFest Ukraine 2018"></iron-image>      
+                    <div class="info-items" layout horizontal wrap>
+                      <div class="info-item">
+                        <iron-icon icon="calendar-event"></iron-icon>
+                        October 12-13, 2018
+                      </div>
+                      <div class="info-item">
+                        <iron-icon icon="place"></iron-icon>
+                        Lviv, Ukraine
+                      </div>
+                    </div>      
+                    <h2 class="motto">The biggest Google tech conference in CEE.
+      All about Android, Web, and Cloud.</h2>
+      
+                    <div class="action-buttons" layout horizontal wrap>
+                      <a href="https://goo.gl/forms/Wn9RLoVAKe6QYKNo1" target="_blank" rel="noopener noreferrer">
+
+                        <paper-button class="primary" raised on-tap="_buyTicket">
+                          <iron-icon icon="ticket"></iron-icon>
+                          Buy ticket
+                        </paper-button>
+                      </a>
+                      <a href="https://goo.gl/forms/Wn9RLoVAKe6QYKNo1" target="_blank" rel="noopener noreferrer">
+
+                        <paper-button class="primary" raised on-tap="_buyTicket">
+                          <iron-icon icon="partner"></iron-icon>
+                          I want to be partner
+                        </paper-button>
+                      </a>
+                      <a href="https://goo.gl/forms/Wn9RLoVAKe6QYKNo1" target="_blank" rel="noopener noreferrer">
+                        <paper-button class="primary" raised>
+                          <iron-icon icon="microphone"></iron-icon>
+                          I want to be speaker
+                        </paper-button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class=animated-part>
+                    <animated-element></animated-element>
+                    <animated-element></animated-element>
+                  </div>
+            </div>
+          </paper-card>
+    </div>
+  </template>
+
+  <script>
+
+    (function () {
+      'use strict';
+
+      Polymer({
+
+        is: 'landing-page'      
+
+      });
+
+    }());
+
+  </script>
+
+</dom-module>

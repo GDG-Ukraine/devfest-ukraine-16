@@ -13,7 +13,8 @@
     "src/pages/quest-page.html",
     "src/pages/gdd-page.html",
     "src/pages/faq-page.html",
-    "src/pages/quest-page.html"
+    "src/pages/quest-page.html",
+    "2018/index.html"
   ],
   "sources": [
     "data/**/*",
@@ -21,12 +22,14 @@
     "scripts/**/*",
     "src/**/*",
     "bower.json",
-    "manifest.json"
+    "manifest.json",
+    "2018/**/*"
   ],
   "extraDependencies": [
     "assets/**/*",
     "bower_components/webcomponentsjs/*.js",
     "bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror-worker.js",
-    "bower_components/app-storage/app-indexeddb-mirror/common-worker-scope.js"
+    "bower_components/app-storage/app-indexeddb-mirror/common-worker-scope.js",
+    "2018/js/*.js"
   ]
 }

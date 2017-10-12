@@ -165,7 +165,8 @@ gulp.task('serve', gulp.series(compileTemplate, () => {
     'scripts/**/*.js',
     'src/**/*.html',
     './index.html',
-    'manifest.json'
+    'manifest.json',
+    '2018/**/*'
   ], gulp.series(compileTemplate, reload));
 }));
 
