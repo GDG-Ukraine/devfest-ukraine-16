@@ -340,18 +340,12 @@ main {
   }
 
 @media (max-width: 676px) {
-	/* .codrops-header__title {
-		font-size: 1em;
-	}
-	.content--grid {
-		padding: 2vh 8vw;
-	}
-	.item__number {
-		font-size: 0.75em;
-	}
-	.item__svg {
-		min-height: 360px;
-	} */
+	.btn.grey:hover, .btn.grey:focus {
+		background-color: transparent;
+		color: #424242;
+		font-weight: 600;
+		box-shadow: none;
+	  }
 
 	.content {
 		padding: 0;
