@@ -21,15 +21,22 @@
         --paper-tab-content: {
           font-weight: 400 !important;
         };
+
         --paper-tab: {
           color: #FFFFFF;
           font-weight: 400;
           text-transform: uppercase;
           flex: none;
         };
+
         display: block;
         position: relative;
         overflow: hidden;
+      }
+
+      .fire-icon {
+        color: var(--firebase);
+        margin-right: 0;
       }
 
       app-toolbar {
@@ -161,12 +168,13 @@
               </div>
 
               <h2 class="motto">{$ motto $}</h2>
-
-              <div class="action-buttons">
-                <span class="watch-video" on-tap="_openTeaser">
-                  <iron-icon icon="play"></iron-icon>
-                  <span>{$ watchTeaser $}</span>
-                </span>
+              <div class="action-buttons">              
+              <paper-button class="primary-white" raised>
+                  <a href="/2018" target="_blank">
+                    <span>#dfua 2018 is coming</span>
+                    <iron-icon class="fire-icon" icon="fire"></iron-icon>
+                  </a>
+              </paper-button>
               </div>
             </div>
           </div>
