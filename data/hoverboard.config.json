@@ -54,6 +54,14 @@
       "permalink": "/speakers/"
     },
     {
+      "route": "quest",
+      "permalink": "/quest/"
+    },
+    {
+      "route": "contest",
+      "permalink": "/contest/"
+    },
+    {
       "route": "team",
       "permalink": "/team/"
     }
@@ -207,10 +215,18 @@
       }
     },
     "quest": {
-      "title": "GDG Quest",
+      "title": "Quest",
       "headerSettings": {
         "backgroundColor": "#EF6C00",
         "backgroundImage": "/images/backgrounds/quest.jpg",
+        "fontColor": "#fff",
+        "tabBarColor": "#fff"
+      }
+    },
+    "contest": {
+      "title": "Contest",
+      "headerSettings": {
+        "backgroundColor": "#EF6C00",
         "fontColor": "#fff",
         "tabBarColor": "#fff"
       }
