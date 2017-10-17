@@ -96,28 +96,28 @@
     ]
   },
   "gallery": {
-    "albumUrl": "https://goo.gl/photos/H8s3CtPexCzkLqSt9",
-    "sharedAlbumUrl": "https://goo.gl/photos/FLUS5ezy5dNzTCXi7",
+    "albumUrl": "https://photos.app.goo.gl/sKx8x4DP9MLmbw2G3",
+    "sharedAlbumUrl": "https://photos.app.goo.gl/orlnk5xOZsJT1SgU2",
     "photos": [
       {
-        "big": "/images/backgrounds/2016_1.jpg",
+        "big": "/images/backgrounds/2017_1.jpg",
         "small": [
-          "/images/backgrounds/2016_2.jpg",
-          "/images/backgrounds/2016_3.jpg"
+          "/images/backgrounds/2017_2.jpg",
+          "/images/backgrounds/2017_3.jpg"
         ]
       },
       {
-        "big": "/images/backgrounds/2016_4.jpg",
+        "big": "/images/backgrounds/2017_4.jpg",
         "small": [
-          "/images/backgrounds/2016_5.jpg",
-          "/images/backgrounds/2016_6.jpg"
+          "/images/backgrounds/2017_5.jpg",
+          "/images/backgrounds/2017_6.jpg"
         ]
       },
       {
-        "big": "/images/backgrounds/2016_7.jpg",
+        "big": "/images/backgrounds/2017_7.jpg",
         "small": [
-          "/images/backgrounds/2016_8.jpg",
-          "/images/backgrounds/2016_9.jpg"
+          "/images/backgrounds/2017_8.jpg",
+          "/images/backgrounds/2017_9.jpg"
         ]
       }
     ]

@@ -91,13 +91,13 @@
         </template>
       </div>
       <div class="details">{$ ticketsDetails $}</div>
-      <paper-button class="buy-button" raised on-tap="_trackBuyClick">
+      <!-- <paper-button class="buy-button" raised on-tap="_trackBuyClick">
         <iron-icon icon="ticket"></iron-icon>
         {$ buyTicket $}
-      </paper-button>
+      </paper-button> -->
     </div>
 
-    <sold-out-dialog
+    <!-- <sold-out-dialog
       id="soldOut"
       app="[[app]]"
       class="sold-out-dialog"
@@ -105,7 +105,7 @@
       exit-animation="fade-out-animation"
       with-background
     >
-    </sold-out-dialog>
+    </sold-out-dialog> -->
 
   </template>
 
@@ -118,11 +118,7 @@
 
         ready: function () {
           HOVERBOARD.Elements.Tickets = this;
-        },
-
-        _trackBuyClick: function (e) {
-          this.$.soldOut.open();
-        },
+        }
 
       });
 
