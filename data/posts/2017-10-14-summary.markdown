@@ -66,8 +66,9 @@ See you at the next events!
 More 🔥 HOT 🔥 updates
 -------------------------
 Already missing these two crazy days? Secure your pass for 2018 
-It is official! [GDG DevFest Ukraine](https://devfest.gdg.org.ua/2018) 2018 is going to take place in Lviv, on **October 12th-13th**. More info is [here](https://devfest.gdg.org.ua/2018). 
+It is official! <a href="/2018" target="_blank">GDG DevFest Ukraine 2018</a> is going to take place in Lviv, on **October 12th-13th**. More info is <a href="/2018" target="_blank">here</a>. 
 
 
 With love 💕,
+
 GDG DevFest Ukraine Team
