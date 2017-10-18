@@ -8,38 +8,38 @@ This year we had so many experts all around the world, passioned speakers has co
 
 The opening keynote speech  was really motivated. Yonatan Levin shared honestly all his fails and success on creating own products, and all the truth about having own startups.
 
-<img src="/images/posts/summary17_1.jpg" style="width: 70%;"/>
+<img src="/images/posts/summary_1.jpg" style="width: 70%;"/>
 
 
 Lots of sessions were full of deep knowledge and inspiration.  First DevFest day was very saturated. Speakers impressed not only their perfect speeches, but also a good sense of humor.
 
-<img src="/images/posts/summary17_2.jpg" style="width: 70%;"/>
+<img src="/images/posts/summary_2.jpg" style="width: 70%;"/>
 
 Martin Split (head of engineering at Archilogic) said: “Polymer is not a magic, just work. No magic, just good stuff” 
 The presentation was really fun, especially when he wears a special suit of the unicorn 😵.
 
-<img src="/images/posts/summary17_3.jpg" style="width: 70%;"/>
+<img src="/images/posts/summary_3.jpg" style="width: 70%;"/>
 
 Jean-Baptiste Clion (Cloud Expert at GDE) showed in his presentation how we can use Genetic Algorithm to illustrated bacterial evolution.
 
-<img src="/images/posts/summary17_4.jpg" style="width: 70%;"/>
+<img src="/images/posts/summary_4.jpg" style="width: 70%;"/>
 
 We got a "full house" on Stage 2 when Anton Minashkin (Chief Software Engineer) was presenting.
 
 Speakers were motivating the audience to create great products.Some of them were coding live. The audience really appreciated it.
 The great mood of the participants and interesting content contributed to a large number of questions. During the breaks between the speeches, participants of Stage 3 actively became acquainted with each other, they made selphy and shared photos.
 
-<img src="/images/posts/summary17_5.jpg" style="width: 70%;"/>
+<img src="/images/posts/summary_5.jpg" style="width: 70%;"/>
 
 What about workshops, they were at their top, for sure. Credits to our incredible speakers who did their best to provide all of the attendees with unforgettable knowledge and experience. 
 
-<img src="/images/posts/summary17_6.jpg" style="width: 70%;"/>
+<img src="/images/posts/summary_6.jpg" style="width: 70%;"/>
 
 
 And those amazing people are Jaroslav Khorishchenko, Ukrainian Iron Man 🏃, Gerard Sans, the Angular Superman 💪, and Lesya Danylyuk, the Wonder Woman of Design Sprint ⭐️.
 
 
-<img src="/images/posts/summary17_7.jpg" style="width: 70%;"/>
+<img src="/images/posts/summary_7.jpg" style="width: 70%;"/>
 
 
 The conference became possible through the support of a number of companies.
