@@ -132,7 +132,7 @@
         padding: 16px 24px;
       }
 
-      .tag-icon {
+      .meta-icon {
         --iron-icon-width: 14px;
         --iron-icon-height: 14px;
         margin-right: 4px;
@@ -193,17 +193,17 @@
           <div class="bottom-caption" layout horizontal center justified>
             <div class="bottom-meta" flex hidden$="[[!_hasBottomMeta(session)]]">
               <div hidden$="[[!session.tags.length]]" layout horizontal center>
-                <iron-icon class="tag-icon" icon="tags"></iron-icon>
+                <iron-icon class="meta-icon" icon="tags"></iron-icon>
                 <span>[[_joinArray(session.tags)]]</span>
               </div>
 
               <div hidden$="[[!session.videoId]]" layout horizontal center>
-                <iron-icon icon="video"></iron-icon>
+                <iron-icon class="meta-icon" icon="video"></iron-icon>
                 <span>Recording available</span>
               </div>
 
               <div hidden$="[[!session.presentation]]" layout horizontal center>
-                <iron-icon icon="presentation"></iron-icon>
+                <iron-icon class="meta-icon" icon="presentation"></iron-icon>
                 <span>Presentation available</span>
               </div>
             </div>
