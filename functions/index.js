@@ -22,6 +22,12 @@ exports.scheduleWrite = functions.database
 
 exports.sessionsWrite = functions.database
     .ref("/sessions").onWrite(event => {
+
+       
+        console.log('event.auth.admin',event.auth.admin);
+        console.log('event.data',event.data);
+        console.log('event.data._delta',event.data._delta);
+
         const sessionsPromise = event.data;
         const schedulePromise = admin.database().ref('/schedule').once('value');
         const speakersPromise = admin.database().ref('/speakers').once('value');
