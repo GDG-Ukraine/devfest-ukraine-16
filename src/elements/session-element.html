@@ -193,17 +193,23 @@
           <div class="bottom-caption" layout horizontal center justified>
             <div class="bottom-meta" flex hidden$="[[!_hasBottomMeta(session)]]">
               <div hidden$="[[!session.tags.length]]" layout horizontal center>
+                <span>
                 <iron-icon class="meta-icon" icon="tags"></iron-icon>
+                </span>
                 <span>[[_joinArray(session.tags)]]</span>
               </div>
 
               <div hidden$="[[!session.videoId]]" layout horizontal center>
+                <span>
                 <iron-icon class="meta-icon" icon="video"></iron-icon>
+                </span>
                 <span>Recording available</span>
               </div>
 
               <div hidden$="[[!session.presentation]]" layout horizontal center>
+                <span>
                 <iron-icon class="meta-icon" icon="presentation"></iron-icon>
+                </span>
                 <span>Presentation available</span>
               </div>
             </div>

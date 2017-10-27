@@ -189,6 +189,14 @@
             </div>
           </div>
         </paper-menu-button>
+        <div class="action-button-wrapper" hidden$="[[app.isPhoneSize]]" layout horizontal center-center>
+          <a href="{$ videosSessionsUrl $}" target="_blank" rel="noopener noreferrer">
+            <paper-button class="action-button">
+              <iron-icon icon="movie-filter"></iron-icon>
+              <span>Session recordings</span>
+            </paper-button>
+          </a>
+        </div>
       </div>
     </app-toolbar>
 

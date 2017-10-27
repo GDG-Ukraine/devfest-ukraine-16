@@ -25,7 +25,7 @@
   "clickToViewPhotos": "Click here to view more photos",
   "partners": "Partners",
   "becomePartner": "Become a partner",
-  "featuredVideosTitle": "Featured #DFUA '16 Sessions",
+  "featuredVideosTitle": "Featured #DFUA '17 Sessions",
   "featuredVideosViewAll": "View all videos",
   "featuredPeopleTitle": "Meet #dfua Rockstars",
   "featuredPeopleViewAll": "View all speakers",
@@ -149,7 +149,7 @@
   "teamPageText": "Google is known all around the world. Everyone is 'googling', checking on 'maps' and communicating in 'gmail'. For simple users, they are services that just works, but not for us. Developers see much more: APIs, scalability issues, complex technology stacks. And that is what GDG is about.<br><br> [Google Developers Group (GDG) Lviv](http://lviv.gdg.org.ua/) - is open and volunteer geek community who create exciting projects and share experience about Google technologies with a passion.<br><br> Our goal is to organize space to connect the best industry experts with Ukrainian audience to boost development of IT.",
   "statistics": [
     {
-      "counter": 900,
+      "counter": "1000+",
       "caption": "Attendees"
     },
     {
@@ -161,7 +161,7 @@
       "caption": "Sessions"
     },
     {
-      "counter": 5,
+      "counter": 6,
       "caption": "Workshops"
     }
   ],

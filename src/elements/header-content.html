@@ -112,6 +112,10 @@
         color: var(--default-primary-color);
       }
 
+      .font-white {
+        color: var(--text-primary-color);
+      }
+
       .info-items {
         margin-top: 8px;
       }
@@ -168,11 +172,17 @@
               </div>
 
               <h2 class="motto">{$ motto $}</h2>
-              <div class="action-buttons">              
+              <div class="action-buttons">
               <paper-button class="primary-white" raised>
                   <a href="/2018" target="_blank">
                     <span>#dfua 2018 is coming</span>
                     <iron-icon class="fire-icon" icon="fire"></iron-icon>
+                  </a>
+              </paper-button>
+              <paper-button>
+                  <a class="font-white" href="{$ videosSessionsUrl $}" target="_blank">
+                    <iron-icon icon="movie-filter"></iron-icon>
+                    <span>Watch session recordings</span>
                   </a>
               </paper-button>
               </div>
@@ -194,7 +204,7 @@
           </div>
         </animatable-content>
         {% endif %}
-        {% endfor %}          
+        {% endfor %}
       </neon-animated-pages>
     </app-toolbar>
 
