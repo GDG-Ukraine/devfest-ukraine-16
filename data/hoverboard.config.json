@@ -16,10 +16,10 @@
     "backgroundColor": "#2196F3"
   },
   "firebase": {
-    "name": "hoverboard-firebase",
-    "domain": "hoverboard-firebase.firebaseapp.com",
-    "database": "https://hoverboard-firebase.firebaseio.com",
-    "api": "AIzaSyDWy6O98n-ueoVaYPWRPve23vjm3JP08gw",
+    "name": "db-history-to-slack",
+    "domain": "db-history-to-slack.firebaseapp.com",
+    "database": "https://db-history-to-slack.firebaseio.com",
+    "api": "AIzaSyCqCT36SMarghDnf_mOURaVfN2vba2_wIE",
     "userSessionsPath": "/userSessions",
     "ratingsPath": "/ratings",
     "indexedDbSession": "dfua"
