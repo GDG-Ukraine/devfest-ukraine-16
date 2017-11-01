@@ -16,7 +16,7 @@ const scheduleGenerator = require('./schedule-generator-helper.js').generateSche
 
 exports.saveBackup = functions.database.ref('/{node}').onWrite(event => {
 
-    const maxBackupsCount = 3;
+    const maxBackupsCount = 10;
 
     // We need to upload backups only once, with not generated schedule changes again
     if(event.params.node == 'generated') {
