@@ -94,11 +94,11 @@ exports.scheduleWrite = functions.database
                 database: functions.config().firebase.databaseURL
             };            
 
-            // postToSlack(data).then(() => {
-            //     console.log("Message sent to Slack");
-            //   }).catch(error => {
-            //     console.error(error);
-            // });
+            postToSlack(data).then(() => {
+                console.log("Message sent to Slack");
+              }).catch(error => {
+                console.error(error);
+            });
 
             publishMessage(topic, data);
         }
@@ -124,11 +124,11 @@ exports.sessionsWrite = functions.database
                 database: functions.config().firebase.databaseURL
             };
 
-            // postToSlack(data).then(() => {
-            //     console.log("Message sent to Slack");
-            //   }).catch(error => {
-            //     console.error(error);
-            // });
+            postToSlack(data).then(() => {
+                console.log("Message sent to Slack");
+              }).catch(error => {
+                console.error(error);
+            });
 
             publishMessage(topic, data);
         }
@@ -153,11 +153,11 @@ exports.speakersWrite = functions.database
                 database: functions.config().firebase.databaseURL
             };
 
-            // postToSlack(data).then(() => {
-            //     console.log("Message sent to Slack");
-            //   }).catch(error => {
-            //     console.error(error);
-            // });
+            postToSlack(data).then(() => {
+                console.log("Message sent to Slack");
+              }).catch(error => {
+                console.error(error);
+            });
 
             publishMessage(topic, data);
         }
@@ -213,34 +213,34 @@ function createTopic(topicName) {
 
 function publishMessage (topic, data) {  
 
-    // const options = {
-    //     batching: {
-    //         maxMilliseconds: 5000
-    //     }
-    // }
-    // // Create a publisher for the topic (which can include additional batching configuration)
-    // const publisher = topic.publisher(options);
+    const options = {
+        batching: {
+            maxMilliseconds: 5000
+        }
+    }
+    // Create a publisher for the topic (which can include additional batching configuration)
+    const publisher = topic.publisher(options);
 
-    // console.log(`Start publish for ${data.dataPath}`);
+    console.log(`Start publish for ${data.dataPath}`);
   
-    // // Publishes the message as a string, e.g. "Hello, world!" or JSON.stringify(someObject)
-    // const dataBuffer = Buffer.from(JSON.stringify(data));
+    // Publishes the message as a string, e.g. "Hello, world!" or JSON.stringify(someObject)
+    const dataBuffer = Buffer.from(JSON.stringify(data));
 
-    // retry({retries: 5, maxTimeout: 8000}, (retry, number) => {
-    //     return publisher.publish(dataBuffer)
-    //     .then((results) => {
-    //         const messageId = results[0];
+    retry({retries: 5, maxTimeout: 8000}, (retry, number) => {
+        return publisher.publish(dataBuffer)
+        .then((results) => {
+            const messageId = results[0];
 
-    //         console.log(`Message ${messageId} published.`);
-    //     })
-    //     .catch((err) => {
-    //         console.error(`An error occured during publish: ${err}`);
-    //         retry(err);
-    //     });
-    //   }).then((val) => {}, (err) => {
-    //     console.log(`An error occured during publish: ${err}`)
-    //     reject(err)
-    //   });    
+            console.log(`Message ${messageId} published.`);
+        })
+        .catch((err) => {
+            console.error(`An error occured during publish: ${err}`);
+            retry(err);
+        });
+      }).then((val) => {}, (err) => {
+        console.log(`An error occured during publish: ${err}`)
+        reject(err)
+      });    
   }
 
 
