@@ -189,13 +189,12 @@
             </div>
           </div>
         </paper-menu-button>
-        <div class="action-button-wrapper" hidden$="[[app.isPhoneSize]]" layout horizontal center-center>
-          <a href="{$ videosSessionsUrl $}" target="_blank" rel="noopener noreferrer">
-            <paper-button class="action-button">
-              <iron-icon icon="movie-filter"></iron-icon>
-              <span>Session recordings</span>
-            </paper-button>
-          </a>
+        <div class="action-button-wrapper" hidden$="[[app.isPhoneSize]]" on-tap="_openHighlights" layout horizontal
+             center-center>
+          <paper-button class="action-button">
+            <iron-icon icon="movie-filter"></iron-icon>
+            <span>View highlights</span>
+          </paper-button>
         </div>
       </div>
     </app-toolbar>
@@ -244,9 +243,9 @@
           }
         },
 
-        _openTeaser: function () {
-          HOVERBOARD.Analytics.trackEvent('video', 'watch_teaser', 'toolbar');
-          HOVERBOARD.Elements.Template.openVideo('{$ teaser.title $}', '{$ teaser.youTubeId $}', true);
+        _openHighlights: function () {
+          HOVERBOARD.Analytics.trackEvent('video', 'watch_highlights', 'toolbar');
+          HOVERBOARD.Elements.Template.openVideo('{$ highlightsVideo.title $}', '{$ highlightsVideo.youTubeId $}', true);
         }
 
       });

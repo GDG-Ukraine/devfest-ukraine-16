@@ -4,7 +4,10 @@
   "keywords": "event, gdg, gde, devfest, google, programming, android, chrome, polymer, developers, web, cloud, androiddev",
   "dates": "October 13-14, 2017",
   "locationAddressShort": "Lviv, Ukraine",
-  "motto": "The biggest Google tech conference in CEE.\nAll about Android, Web, and Cloud.",
+  "motto": {
+    "part1": "The biggest community-driven Google tech conference in CEE.",
+    "part2": "All about Android, Web, and Cloud."
+  },
   "playIcon": "See how it was in 2016",
   "c4p": "Become a speaker",
   "buyTicket": "Buy ticket",
@@ -180,6 +183,10 @@
   "teaser": {
     "title": "GDG DevFest Ukraine 2017 - Teaser",
     "youTubeId": "213KE48Gu6U"
+  },
+  "highlightsVideo": {
+    "title": "GDG DevFest Ukraine 2017",
+    "youTubeId": "HLT4mmRsDnc"
   },
   "workshopWarning": {
     "headerText": "Capacity for this workshop is limited.",

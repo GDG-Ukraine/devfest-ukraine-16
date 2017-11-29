@@ -95,6 +95,7 @@
 
       .action-buttons {
         margin-top: 24px;
+        display: flex;
       }
 
       paper-button {
@@ -156,6 +157,7 @@
       <neon-animated-pages attr-for-selected="name" selected="{{app.page}}">
         <animatable-content name="home">
           <div class="container" center-justified>
+
             <div class="home-wrapper">
               <iron-image class="logo" src="/images/logo-light.svg" sizing="contain"
                           alt="GDG DevFest Ukraine 2017"></iron-image>
@@ -171,20 +173,18 @@
                 </div>
               </div>
 
-              <h2 class="motto">{$ motto $}</h2>
+              <h2 class="motto">{$ motto.part1 $}<br>{$ motto.part2 $}</h2>
               <div class="action-buttons">
-              <paper-button class="primary-white" raised>
-                  <a href="/2018" target="_blank">
-                    <span>#dfua 2018 is coming</span>
-                    <iron-icon class="fire-icon" icon="fire"></iron-icon>
-                  </a>
-              </paper-button>
-              <paper-button>
+                <paper-button>
                   <a class="font-white" href="{$ videosSessionsUrl $}" target="_blank">
-                    <iron-icon icon="movie-filter"></iron-icon>
-                    <span>Watch session recordings</span>
+                    <iron-icon icon="play-circle-outline"></iron-icon>
+                    <span>Session recordings</span>
                   </a>
-              </paper-button>
+                </paper-button>
+                <paper-button class="primary-white" on-tap="_openHighlightsVideo" raised>
+                    <iron-icon icon="movie-filter"></iron-icon>
+                    <span>View highlights</span>
+                </paper-button>
               </div>
             </div>
           </div>
@@ -230,9 +230,9 @@
           }
         },
 
-        _openTeaser: function () {
-          HOVERBOARD.Analytics.trackEvent('video', 'watch_teaser', 'header');
-          HOVERBOARD.Elements.Template.openVideo('{$ teaser.title $}', '{$ teaser.youTubeId $}', true);
+        _openHighlightsVideo: function () {
+          HOVERBOARD.Analytics.trackEvent('video', 'watch_highlights', 'header');
+          HOVERBOARD.Elements.Template.openVideo('{$ highlightsVideo.title $}', '{$ highlightsVideo.youTubeId $}', true);
         }
 
       });

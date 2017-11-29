@@ -53,7 +53,7 @@
       .image-overlay {
         @apply(--layout-fit);
         @apply(--opacity-animation);
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.7) 140%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7) 140%);
         height: 100%;
       }
 
@@ -198,7 +198,7 @@
 
           <cod-page name="cod"
                     app="{{app}}"></cod-page>
-                    
+
           <gdd-page name="gdd"
                     app="{{app}}"></gdd-page>
 
@@ -206,7 +206,7 @@
                            app="{{app}}"></hub-page>
           <faq-page name="faq"
                           app="{{app}}"></faq-page>
-      
+
 
         </neon-animated-pages>
       </div>
@@ -220,7 +220,7 @@
                   exit-animation="fade-out-animation"
                   disable-controls="[[!video.disableControls]]"></video-dialog>
 
-    <toast-element id="toast" app="{{app}}"></toast-element>   
+    <toast-element id="toast" app="{{app}}"></toast-element>
 
     <info-dialog
       id="infoDialog"
