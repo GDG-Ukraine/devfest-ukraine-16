@@ -1,9 +1,9 @@
 {
-  "url": "https://devfest.gdg.org.ua",
+  "url": "https://dfua17.firebaseapp.com",
   "startDate": "2017-10-13T09:00:00+03:00",
   "endDate": "2017-10-14T19:00:00+03:00",
   "analytics": {
-    "prod": "UA-43643469-1",
+    "prod": "UA-43643469-9",
     "dev": "UA-43643469-9"
   },
   "organizer": {
@@ -16,10 +16,10 @@
     "backgroundColor": "#2196F3"
   },
   "firebase": {
-    "name": "hoverboard-firebase",
-    "domain": "hoverboard-firebase.firebaseapp.com",
-    "database": "https://hoverboard-firebase.firebaseio.com",
-    "api": "AIzaSyDWy6O98n-ueoVaYPWRPve23vjm3JP08gw",
+    "name": "dfua17",
+    "domain": "dfua17.firebaseapp.com",
+    "database": "https://dfua17.firebaseio.com",
+    "api": "AIzaSyDVxMXgQzE5ygO__YdjwEu-m6YSGCCEnSo",
     "userSessionsPath": "/userSessions",
     "ratingsPath": "/ratings",
     "indexedDbSession": "dfua"
