@@ -9,14 +9,6 @@
       {
         "source": "**/*",
         "destination": "/index.html"
-      },
-      {
-        "source": "/2018",
-        "destination": "/2018/index.html"
-      },
-      {
-        "source": "/2018/",
-        "destination": "/2018/index.html"
       }
     ],
     "ignore": [
